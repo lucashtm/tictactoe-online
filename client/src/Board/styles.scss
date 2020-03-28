@@ -1,0 +1,11 @@
+.board {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  background-color: #000;
+  border-radius: 5px;
+
+}

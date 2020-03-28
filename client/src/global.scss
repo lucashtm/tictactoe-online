@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2:400,500,600,700,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #f0f0f5;
+  font: 500 14px 'Baloo Thambi 2', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.board-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 700px;
+  margin-top: 100px;;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow:-6px 6px 5px #A3A3AD;
+}
+
+.app-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.winner-title {
+  position: absolute;
+  font-size: 48px;
+}
