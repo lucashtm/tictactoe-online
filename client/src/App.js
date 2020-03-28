@@ -13,6 +13,7 @@ function App() {
     socket.on('connect', () => {
       console.log('AAAAA');
     });
+
     socket.on('setwinner', data => {
       setWinner(data.marker);
     })
@@ -21,10 +22,10 @@ function App() {
   return (
     <div className="app-container">
       {winner === 'x' &&
-        <h1 className="winner-title">Player X won!</h1>
+        <h1 className="dialog">Player X won!</h1>
       }
       {winner === 'o' &&
-        <h1 className="winner-title">Player O won!</h1>
+        <h1 className="dialog">Player O won!</h1>
       }
       <div className="board-container">
         <Board socket={socket} enabled={winner === ''} />
