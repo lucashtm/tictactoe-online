@@ -7,15 +7,19 @@ export default function Place(props){
 
   const socket = props.socket;
   const id = props.id;
-  const [marker, setMarker] = useState('');
+  const [marker, setMarker] = useState(props.marker);
 
   socket.on('setmarker', data => {
     if(data.id === id) setMarker(data.marker);
   });
 
+  socket.on('board-setup', data => {
+    setMarker(data.marker);
+  });
+
   function submitRound(){
     if(props.enabled)
-      socket.emit('place-click', { id: id });
+      socket.emit('place-click', { place: id, playerId: localStorage.getItem('playerId') });
   }
 
   return(
