@@ -6,12 +6,11 @@ import './global.scss'
 
 function App() {
 
-  const socket = socketio('localhost:3333');
+  const socket = socketio('http://ec2-54-207-245-203.sa-east-1.compute.amazonaws.com:3333');
   const [winner, setWinner] = useState('');
 
   useEffect(() => {
     socket.on('connect', () => {
-      console.log('AAAAA');
     });
 
     socket.on('setwinner', data => {
